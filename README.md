@@ -10,5 +10,4 @@
 
 
 **The Algorithms folder** 
-
-contains only the implementation (as functions) of the sorting algorithms mentioned above.
+- contains only the implementation (as functions) of the sorting algorithms mentioned above.
