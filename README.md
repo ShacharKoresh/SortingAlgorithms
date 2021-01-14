@@ -8,4 +8,7 @@
 - Compares the performances of these sorting algorithms on different types and sizes of input.
 
 
-**The Algorithms folder** contains only the implementation (as functions) of the sorting algorithms mentioned above.
+
+**The Algorithms folder** 
+
+contains only the implementation (as functions) of the sorting algorithms mentioned above.
