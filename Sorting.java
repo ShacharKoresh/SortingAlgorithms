@@ -8,7 +8,12 @@ public class Sorting {
 	final static int BUBBLE_VS_QUICK_SORTED_LENGTH = 12;
 	final static int ARBITRARY_VS_MEDIAN_LENGTH = 16;
 	final static double T = 600.0;
-		
+	
+	
+/************************************************************************************************
+*                              Quick Sort Using Arbitrary Pivot                                 *
+*************************************************************************************************/
+	
 	/**
 	 * Sorts a given array using the quick sort algorithm.
 	 * At each stage the pivot is chosen to be the rightmost element of the subarray.
@@ -90,7 +95,13 @@ public class Sorting {
 		return i;
 	}
 	
-		
+	
+
+/************************************************************************************************
+*                                 Quick Sort Using Median Pivot                                 *
+*************************************************************************************************/	
+	
+	
 	/**
 	 * Sorts a given array using the quick sort algorithm.
 	 * At each stage the pivot is chosen in the following way:
@@ -103,7 +114,6 @@ public class Sorting {
 	public static void quickSortMedianPivot(double[] arr){
 			quickSortMedianPivot(arr, 0, arr.length - 1);
 		}
-	
 	
 	/**
 	 * An auxiliary function for quickSortMedianPivot.
@@ -218,6 +228,11 @@ public class Sorting {
 		return i;
 	}
 
+	
+/************************************************************************************************
+*                                          Merge Sort                                           *
+*************************************************************************************************/
+	
 
 	/**
 	 * Sorts a given array using the merge sort algorithm.
@@ -299,6 +314,12 @@ public class Sorting {
 	}
 
 
+	
+/************************************************************************************************
+*                                          Bubble Sort                                          *
+*************************************************************************************************/
+	
+	
 	/**
 	 * Sorts a given array using bubble sort.
 	 * If at any time the algorithm recognizes no more inversions are needed it should stop.
@@ -349,6 +370,12 @@ public class Sorting {
 	}
 
 	
+		
+/************************************************************************************************
+*                                   COMPARING SECTION                                           *
+*                      Compare between the different sorting algorithms                         *
+*************************************************************************************************/
+		
 	public static void main(String[] args) {
 
 		bubbleVsQuick();
