@@ -1,19 +1,14 @@
 package Sorting;
-
 import java.util.Random;
-
 import Plotter.Plotter;
 
 public class Sorting {
-
-
 	final static int BUBBLE_VS_QUICK_LENGTH = 12;
 	final static int MERGE_VS_QUICK_LENGTH = 15;
 	final static int BUBBLE_VS_QUICK_SORTED_LENGTH = 12;
 	final static int ARBITRARY_VS_MEDIAN_LENGTH = 16;
 	final static double T = 600.0;
 		
-	
 	/**
 	 * Sorts a given array using the quick sort algorithm.
 	 * At each stage the pivot is chosen to be the rightmost element of the subarray.
