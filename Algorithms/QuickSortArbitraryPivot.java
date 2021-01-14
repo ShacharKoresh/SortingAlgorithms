@@ -7,7 +7,7 @@
 * @param arr - the array to be sorted
 */
 public static void quickSortArbitraryPivot(double[] arr){
-  quickSortArbitraryPivot(arr, 0, arr.length - 1);
+	quickSortArbitraryPivot(arr, 0, arr.length - 1);
 }
 
 
@@ -21,15 +21,15 @@ public static void quickSortArbitraryPivot(double[] arr){
 * @param rightIndex - last Index of the subArray
 */
 public static void quickSortArbitraryPivot(double[] arr, int leftIndex, int rightIndex){
-  int pivotIndex;
+	int pivotIndex;
 	if(leftIndex + 2 < rightIndex) {
-    pivotIndex = partitionArbitrary(arr, leftIndex, rightIndex);
-	  quickSortArbitraryPivot(arr, leftIndex, pivotIndex - 1);
-	  quickSortArbitraryPivot(arr, pivotIndex + 1, rightIndex);
-  } 
-  else {
-    bubbleSort(arr, leftIndex, rightIndex);
-  }
+		pivotIndex = partitionArbitrary(arr, leftIndex, rightIndex);
+		quickSortArbitraryPivot(arr, leftIndex, pivotIndex - 1);
+		quickSortArbitraryPivot(arr, pivotIndex + 1, rightIndex);
+	} 
+  	else {
+    		bubbleSort(arr, leftIndex, rightIndex);
+ 	}
 }
 
 
@@ -48,33 +48,33 @@ public static void quickSortArbitraryPivot(double[] arr, int leftIndex, int righ
 * @return the correct Index of the pivot
 */
 public static int partitionArbitrary(double[] arr, int leftIndex, int rightIndex) {
-  //chooses the pivot to be the most right element in the current subArray
-  double pivot = arr[rightIndex];
-  //start comparison
-  int i = leftIndex;
-  int j = rightIndex;
-  while (i < j) {
-    //while the current element is bigger or equals to the Pivot - move left 
-    while((arr[j] >= pivot) && (j > leftIndex)){
-      j--;
-    }
-    //while the current element is smaller than the Pivot - move right
-    while(arr[i] < pivot) {
-      i++;
-    }
-    //if we haven't compare all the elements in the array
-    //and found 2 elements that are not sorted - switch between them
-    if(i < j) {
-      double temp2 = arr[i];
-      arr[i] = arr[j];
-      arr[j] = temp2;
-    }
-    //if we checked all elements in the array - we found the correct place for the Pivot
-    else {
-      double temp = arr[i];
-      arr[i]=arr[rightIndex];
-      arr[rightIndex]= temp;
-    }
-  }
-  return i;
+	//chooses the pivot to be the most right element in the current subArray
+	double pivot = arr[rightIndex];
+	//start comparison
+	int i = leftIndex;
+	int j = rightIndex;
+	while (i < j) {
+    		//while the current element is bigger or equals to the Pivot - move left 
+    		while((arr[j] >= pivot) && (j > leftIndex)){
+      			j--;
+    		}
+    		//while the current element is smaller than the Pivot - move right
+    		while(arr[i] < pivot) {
+      			i++;
+    		}
+		//if we haven't compare all the elements in the array
+		//and found 2 elements that are not sorted - switch between them
+		if(i < j) {
+		      double temp2 = arr[i];
+		      arr[i] = arr[j];
+		      arr[j] = temp2;
+    		}
+    		//if we checked all elements in the array - we found the correct place for the Pivot
+    		else {
+		      double temp = arr[i];
+		      arr[i]=arr[rightIndex];
+		      arr[rightIndex]= temp;
+   		}
+  	}
+  	return i;
 }
