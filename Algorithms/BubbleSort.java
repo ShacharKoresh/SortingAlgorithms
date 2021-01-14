@@ -24,25 +24,25 @@ public static void bubbleSort(double[] arr){
 public static void bubbleSort(double[] arr, int leftIndex, int rightIndex){
 	//if there is at least 1 element
 	if ((rightIndex - leftIndex) >= 1) {
-  	double temp = 0;
-  	boolean swap = true;
-  	for (int i = leftIndex ; i < rightIndex ; i++) {
-    	for (int j = leftIndex + 1; j <= rightIndex ; j++) {
-      	//if 2 elements are not sorted - swap between them
-      	if (arr[j - 1] > arr[j]) {
-        	temp = arr[j - 1];
-        	arr[j - 1] = arr[j];
-        	arr[j] = temp;
-        	swap = false;
-      	}
+		double temp = 0;
+		boolean swap = true;
+		for (int i = leftIndex ; i < rightIndex ; i++) {
+			for (int j = leftIndex + 1; j <= rightIndex ; j++) {
+				//if 2 elements are not sorted - swap between them
+				if (arr[j - 1] > arr[j]) {
+					temp = arr[j - 1];
+					arr[j - 1] = arr[j];
+					arr[j] = temp;
+					swap = false;
+				}
 			}
-      //if no inversions were made, it means that the array is sorted - function stops.
-      if(swap == true) {
-      	break;
-      }
-      else {
-     		swap = true;
-      }
-    }
-  }
+			//if no inversions were made, it means that the array is sorted - function stops.
+			if(swap == true) {
+				break;
+			}
+			else {
+				swap = true;
+			}
+		}
+	}
 }
